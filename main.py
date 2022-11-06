@@ -1,10 +1,12 @@
 # Main file for automation of Moodle synchonization
 import os
 import logging
+from warnings import warn
 from datetime import datetime
 
 
 def init(_filename = 'log_moodle_automated.log'):
+    warn(f'The module {__name__} is deprecated.', DeprecationWarning, stacklevel=2)
     print("Intialization application for moodle export")
     try:
         logging.basicConfig(filename=_filename, encoding='utf-8', level=logging.DEBUG)
