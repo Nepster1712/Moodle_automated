@@ -1,20 +1,21 @@
 # Main file for automation of Moodle synchonization
-
 import os
 import logging
 from datetime import datetime
 
 
-def init():
+def init(_filename = 'log_moodle_automated.log'):
     print("Intialization application for moodle export")
-    _filename = 'log_moodle_automated.log'
     try:
         logging.basicConfig(filename=_filename, encoding='utf-8', level=logging.DEBUG)
     except FileExistsError:
         logging.info("Log file " + _filename + " already exists.")
         pass
+    except FileNotFoundError:
+        raise FileNotFoundError
     finally:
         del _filename
+
 
 # Main function
 def main():
