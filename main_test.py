@@ -9,7 +9,7 @@ def test_init():
     try:
         init(_filename)
     finally:
-        assert file_exists(_filename) == True
+        assert file_exists(_filename)
 
 
          
