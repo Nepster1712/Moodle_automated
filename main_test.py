@@ -1,6 +1,5 @@
 # Testing
 import pytest
-import logging
 from os.path import exists as file_exists
 from main import init
 
@@ -12,4 +11,3 @@ def test_init():
         assert file_exists(_filename) == False
 
 
-         
